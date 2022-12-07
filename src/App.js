@@ -7,7 +7,7 @@ function App() {
     <div className="App">
       <div className="container">
         <p className="Weather">
-          <Weather />
+          <Weather startCity="Warsaw" />
         </p>
         <h6>
           Coded by Malwina Flis. It is open-sourced at{" "}
