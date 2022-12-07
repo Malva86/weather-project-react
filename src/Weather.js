@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import Time from "./Time";
 
 export default function Weather(props) {
   const [redy, setRedy] = useState(false);
@@ -12,7 +13,7 @@ export default function Weather(props) {
       humi: response.data.main.humidity,
       desc: response.data.weather[0].main,
       icon: "https://ssl.gstatic.com/onebox/weather/64/cloudy.png",
-      date: "Sunday 10:00",
+      date: new Date(response.data.dt * 1000),
     });
 
     setRedy(true);
@@ -37,7 +38,9 @@ export default function Weather(props) {
               <li className="CityName">
                 <strong>{forecast.city}</strong>
               </li>
-              <li className="Time">{forecast.date}</li>
+              <li className="Time">
+                <Time date={forecast.date} />
+              </li>
             </ul>
           </div>
           <div className="col-md-6">
