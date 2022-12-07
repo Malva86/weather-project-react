@@ -5,6 +5,7 @@ import Time from "./Time";
 export default function Weather(props) {
   const [redy, setRedy] = useState(false);
   const [forecast, setForecast] = useState({});
+  const [city, setCity] = useState(props.startCity);
   function handleResponse(response) {
     setForecast({
       temp: response.data.main.temp,
@@ -19,19 +20,39 @@ export default function Weather(props) {
     setRedy(true);
   }
 
+  function search() {
+    const apiKey = "f4694dab77f16eded26a08442f7ba9ab";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+    axios.get(apiUrl).then(handleResponse);
+  }
+
+  function Submit(event) {
+    event.preventDefault();
+    search();
+  }
+
+  function cityChange(event) {
+    setCity(event.target.value);
+  }
+
   if (redy) {
     return (
       <div className="WeatherApp">
-        <form>
+        <form onSubmit={Submit}>
           <div className="row">
             <div className="col-md-8">
-              <input type="search" placeholder="Type a city..." />
+              <input
+                type="search"
+                placeholder="Type a city..."
+                onChange={cityChange}
+              />
             </div>
             <div className="col-md-4 SearchButton">
               <input type="submit" value="📌" />
             </div>
           </div>
         </form>
+
         <div className="row City">
           <div className="col-md-6">
             <ul>
@@ -66,10 +87,7 @@ export default function Weather(props) {
       </div>
     );
   } else {
-    const apiKey = "f4694dab77f16eded26a08442f7ba9ab";
-    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${props.startCity}&appid=${apiKey}&units=metric`;
-    axios.get(apiUrl).then(handleResponse);
-
+    search();
     return "Loading...";
   }
 }
