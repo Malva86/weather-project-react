@@ -1,0 +1,32 @@
+.Weather {
+  max-width: 400px;
+  margin: 50px auto;
+  height: 600px;
+}
+
+.Weather {
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+.Weather ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.Weather .Condition {
+  margin-top: 300px;
+  margin-left: 50px;
+}
+
+.Weather .City {
+  margin-left: 50px;
+  margin-top: 20px;
+}
+
+.Weather form {
+  margin-left: 50px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
