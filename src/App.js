@@ -10,7 +10,14 @@ function App() {
           <Weather />
         </p>
         <h6>
-          Coded by Malwina Flis. It is open-sourced at <a href="#">GitHub</a>
+          Coded by Malwina Flis. It is open-sourced at{" "}
+          <a
+            href="https://github.com/Malva86/weather-project-react"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            GitHub
+          </a>
         </h6>
       </div>
     </div>

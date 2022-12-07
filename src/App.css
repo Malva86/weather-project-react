@@ -1,0 +1,10 @@
+.App {
+  max-width: 350px;
+  margin: 50px auto;
+  height: 500px;
+  font-family: "Playfair Display", serif;
+}
+
+h6 {
+  text-align: center;
+}

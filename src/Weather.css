@@ -1,10 +1,4 @@
 .Weather {
-  max-width: 400px;
-  margin: 50px auto;
-  height: 600px;
-}
-
-.Weather {
   border: 1px solid black;
   border-radius: 5px;
 }
@@ -16,17 +10,45 @@
 }
 
 .Weather .Condition {
-  margin-top: 300px;
-  margin-left: 50px;
+  margin-top: 200px;
+  margin-left: 20px;
+  margin-bottom: 100px;
+  margin-right: 20px;
 }
 
 .Weather .City {
-  margin-left: 50px;
+  margin-left: 20px;
   margin-top: 20px;
 }
 
 .Weather form {
-  margin-left: 50px;
+  margin-left: 20px;
   margin-top: 20px;
   margin-bottom: 20px;
+}
+
+.Weather .Temp {
+  font-size: 36px;
+}
+
+.Weather .Desc {
+  font-size: 24px;
+  padding-left: 30px;
+  padding-top: 10px;
+}
+
+.Temp,
+.Wind,
+.Humidity {
+  padding-left: 30px;
+}
+
+.Weather .CityName {
+  font-size: 40px;
+}
+
+.Weather .Time,
+.Wind,
+.Humidity {
+  font-size: 18px;
 }
