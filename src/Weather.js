@@ -13,7 +13,7 @@ export default function Weather(props) {
       city: response.data.name,
       humi: response.data.main.humidity,
       desc: response.data.weather[0].main,
-      icon: "https://ssl.gstatic.com/onebox/weather/64/cloudy.png",
+      icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
       date: new Date(response.data.dt * 1000),
     });
 
@@ -71,7 +71,7 @@ export default function Weather(props) {
           </div>
         </div>
         <div className="row Condition">
-          <div className="col-md-6">
+          <div className="col-md-6 Icon">
             <img src={forecast.icon} alt="Icon" />
           </div>
           <div className="col-md-6">
