@@ -1,6 +1,7 @@
 .Weather {
   border: 1px solid black;
   border-radius: 5px;
+  background-color: rgba(11, 11, 179, 0.397);
 }
 
 .Weather ul {
