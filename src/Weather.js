@@ -56,7 +56,7 @@ export default function Weather(props) {
         </form>
 
         <div className="row City">
-          <div className="col-md-6">
+          <div className="col-md-8">
             <ul>
               <li className="CityName">
                 <strong>{forecast.city}</strong>
@@ -66,7 +66,7 @@ export default function Weather(props) {
               </li>
             </ul>
           </div>
-          <div className="col-md-6">
+          <div className="col-md-4">
             <h5 className="Desc">
               <strong>{forecast.desc}</strong>
             </h5>

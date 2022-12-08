@@ -1,7 +1,7 @@
 .Weather {
   border: 1px solid black;
   border-radius: 5px;
-  background-color: rgba(11, 11, 179, 0.397);
+  background-color: rgba(29, 173, 184, 0.397);
 }
 
 .Weather ul {
@@ -34,14 +34,14 @@
 
 .Weather .Desc {
   font-size: 24px;
-  padding-left: 30px;
+  padding-right: 40px;
   padding-top: 10px;
 }
 
 .Temp,
 .Wind,
 .Humidity {
-  padding-left: 30px;
+  padding-left: 10px;
 }
 
 .Weather .CityName {
