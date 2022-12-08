@@ -70,6 +70,7 @@ export default function Weather(props) {
             </h5>
           </div>
         </div>
+
         <div className="row Condition">
           <div className="col-md-6 Icon">
             <img src={forecast.icon} alt="Icon" />
