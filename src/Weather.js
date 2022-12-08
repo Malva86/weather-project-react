@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import axios from "axios";
 import Time from "./Time";
+import Temp from "./Temp";
+import Icon from "./Icon";
 
 export default function Weather(props) {
   const [redy, setRedy] = useState(false);
@@ -13,7 +15,7 @@ export default function Weather(props) {
       city: response.data.name,
       humi: response.data.main.humidity,
       desc: response.data.weather[0].main,
-      icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
+      icon: response.data.weather[0].icon,
       date: new Date(response.data.dt * 1000),
     });
 
@@ -73,12 +75,12 @@ export default function Weather(props) {
 
         <div className="row Condition">
           <div className="col-md-6 Icon">
-            <img src={forecast.icon} alt="Icon" />
+            <Icon code={forecast.icon} />
           </div>
           <div className="col-md-6">
             <ul>
               <li className="Temp">
-                <strong>{Math.round(forecast.temp)}°C</strong>
+                <Temp celsius={forecast.temp} />
               </li>
               <li className="Wind">💨 {Math.round(forecast.wind)} km/h</li>
               <li className="Humidity">💦 {forecast.humi}%</li>
