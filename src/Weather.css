@@ -54,9 +54,14 @@
   font-size: 18px;
 }
 
-img {
+.Icon img {
   width: 150px;
   height: auto;
   padding-bottom: 50px;
   padding-right: 20px;
+}
+
+.form {
+  display: flex;
+  justify-content: space-evenly;
 }

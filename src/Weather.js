@@ -3,6 +3,7 @@ import axios from "axios";
 import Time from "./Time";
 import Temp from "./Temp";
 import Icon from "./Icon";
+import Forecast from "./Forecast";
 
 export default function Weather(props) {
   const [redy, setRedy] = useState(false);
@@ -40,21 +41,22 @@ export default function Weather(props) {
   if (redy) {
     return (
       <div className="WeatherApp">
-        <form onSubmit={Submit}>
-          <div className="row">
-            <div className="col-md-8">
-              <input
-                type="search"
-                placeholder="Type a city..."
-                onChange={cityChange}
-              />
+        <div className="form">
+          <form onSubmit={Submit}>
+            <div className="row">
+              <div className="col-md-8">
+                <input
+                  type="search"
+                  placeholder="Type a city..."
+                  onChange={cityChange}
+                />
+              </div>
+              <div className="col-md-4 SearchButton">
+                <input type="submit" value="📌" />
+              </div>
             </div>
-            <div className="col-md-4 SearchButton">
-              <input type="submit" value="📌" />
-            </div>
-          </div>
-        </form>
-
+          </form>
+        </div>
         <div className="row City">
           <div className="col-md-8">
             <ul>
@@ -75,7 +77,7 @@ export default function Weather(props) {
 
         <div className="row Condition">
           <div className="col-md-6 Icon">
-            <Icon code={forecast.icon} />
+            <Icon code={forecast.icon} size={150} />
           </div>
           <div className="col-md-6">
             <ul>
@@ -87,6 +89,7 @@ export default function Weather(props) {
             </ul>
           </div>
         </div>
+        <Forecast />
       </div>
     );
   } else {
