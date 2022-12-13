@@ -1,3 +1,12 @@
 .Forecast {
   text-align: center;
 }
+
+.forTempMax,
+.forTempMin {
+  font-size: 12px;
+}
+
+.one {
+  padding-bottom: 20px;
+}

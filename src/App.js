@@ -9,7 +9,7 @@ function App() {
         <p className="Weather">
           <Weather startCity="Warsaw" />
         </p>
-        <h6>
+        <h6 className="footer">
           Coded by Malwina Flis. It is open-sourced at{" "}
           <a
             href="https://github.com/Malva86/weather-project-react"
