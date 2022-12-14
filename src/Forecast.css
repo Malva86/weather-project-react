@@ -1,5 +1,6 @@
 .Forecast {
   text-align: center;
+  color: azure;
 }
 
 .forTempMax,
@@ -7,6 +8,7 @@
   font-size: 12px;
 }
 
-.one {
+.one,
+.two {
   padding-bottom: 20px;
 }

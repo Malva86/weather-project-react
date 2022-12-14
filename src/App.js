@@ -10,13 +10,21 @@ function App() {
           <Weather startCity="Warsaw" />
         </p>
         <h6 className="footer">
-          Coded by Malwina Flis. It is open-sourced at{" "}
+          Coded by Malwina Flis. It is open-sourced on{" "}
           <a
             href="https://github.com/Malva86/weather-project-react"
             target="_blank"
             rel="noopener noreferrer"
           >
             GitHub
+          </a>
+          . Hosted on{" "}
+          <a
+            href="https://jovial-jelly-cf07f7.netlify.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Netlify
           </a>
         </h6>
       </div>

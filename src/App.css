@@ -13,3 +13,7 @@ h6 {
 a:link {
   text-decoration: none;
 }
+
+.App {
+  margin-bottom: 0px;
+}

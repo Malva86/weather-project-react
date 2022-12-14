@@ -42,10 +42,10 @@ export default function Weather(props) {
   if (redy) {
     return (
       <div className="WeatherApp">
-        <div className="form">
+        <div className="formUnit">
           <form onSubmit={Submit}>
             <div className="row">
-              <div className="col-md-8">
+              <div className="col-md-8 form">
                 <input
                   type="search"
                   placeholder="Type a city..."
@@ -85,8 +85,12 @@ export default function Weather(props) {
               <li className="Temp">
                 <Temp celsius={forecast.temp} />
               </li>
-              <li className="Wind">💨 {Math.round(forecast.wind)} km/h</li>
-              <li className="Humidity">💦 {forecast.humi}%</li>
+              <li className="Wind">
+                💨 <strong>{Math.round(forecast.wind)} km/h</strong>
+              </li>
+              <li className="Humidity">
+                💦 <strong>{forecast.humi}%</strong>
+              </li>
             </ul>
           </div>
         </div>
